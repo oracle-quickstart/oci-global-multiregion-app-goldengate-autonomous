@@ -1,0 +1,153 @@
+-- Edge Case Sequences Multi-Master n-way replication --
+
+This can be used to create a unique number on each site and then replicating that unique number to all the other sites with same value without collision. The trick is to ensure that each site writes the primary key on the table using a sequence with next val and incrementing it with a unique number
+
+For 4-Node Multi-Master Replication
+
+The following is an example sequence management for a 4-way active-active replication. 
+
+SQL>create sequence member_seq_1 start with 100 increment by 4 cache 100;
+Sequence created.
+
+SQL>create sequence member_seq_2 start with 101 increment by 4 cache 100;
+Sequence created.
+
+SQL>create sequence member_seq_3 start with 102  increment by 4 cache 100;
+Sequence created.
+
+SQL>create sequence member_seq_4 start with 103 increment by 4 cache 100;
+Sequence created.
+
+SQL>select member_seq_1.nextval, member_seq_2.nextval, member_seq_3.nextval, 
+member_seq_4.nextval from dual;
+
+Now create the table and sequences in each site. Make sure you are not replicating the DDL and create each individual table and sequences in each site
+
+
+-- Sydney -- 
+create table customers_seq (
+  customer_id     NUMBER PRIMARY KEY ,
+  email_address   varchar2(255 char) not null,
+  full_name       varchar2(255 char) not null)
+;
+
+create sequence member_seq_syd start with 100 increment by 4 cache 100;
+
+select * from customers_seq;
+
+
+insert into customers_seq
+values (member_seq_syd.nextval,'thelpa@internalmail.com','thelpa');
+commit;
+
+drop table customers_seq;
+
+delete from customers_seq;
+
+
+
+
+-- Singapore -- 
+
+create table customers_seq (
+  customer_id     NUMBER PRIMARY KEY ,
+  email_address   varchar2(255 char) not null,
+  full_name       varchar2(255 char) not null)
+;
+
+create sequence member_seq_sgp start with 101 increment by 4 cache 100;
+
+
+select * from customers_seq;
+
+
+insert into customers_seq
+values (member_seq_sgp.nextval,'frank@internalmail.com','frank');
+commit;
+
+update customers_seq set email_address='frank.miller@internalmail.com' where customer_id=101;
+commit;
+
+drop table customers_seq;
+
+delete from customers_seq;
+
+
+
+
+-- Frankfurt -- 
+
+create table customers_seq (
+  customer_id     NUMBER PRIMARY KEY ,
+  email_address   varchar2(255 char) not null,
+  full_name       varchar2(255 char) not null)
+;
+
+create sequence member_seq_fra start with 102 increment by 4 cache 100;
+
+
+select * from customers_seq;
+
+
+insert into customers_seq
+values (member_seq_fra.nextval,'mark@internalmail.com','mark');
+commit;
+
+drop table customers_seq;
+
+delete from customers_seq;
+
+
+-- Ashburn -- 
+
+create table customers_seq (
+  customer_id     NUMBER PRIMARY KEY ,
+  email_address   varchar2(255 char) not null,
+  full_name       varchar2(255 char) not null)
+;
+
+create sequence member_seq_iad start with 103 increment by 4 cache 100;
+
+
+select * from customers_seq;
+
+
+insert into customers_seq
+values (member_seq_iad.nextval,'sempre@internalmail.com','sempre');
+commit;
+
+drop table customers_seq;
+
+delete from customers_seq;
+
+
+
+#############################
+Extract and Replicats Code :
+#############################
+
+EXTRACT EXTSYD
+USERIDALIAS ggsydney DOMAIN OracleGoldenGate
+EXTTRAIL BB
+TRANLOGOPTIONS EXCLUDETAG 70
+TABLE ADMIN.customers;
+TABLE ADMIN.inventory;
+TABLE ADMIN.stores;
+TABLE ADMIN.products;
+TABLE ADMIN.orders;
+TABLE ADMIN.shipments;
+TABLE ADMIN.order_items;
+TABLE ADMIN.customers_seq;
+
+REPLICAT REPSYD
+USERIDALIAS ggsydney DOMAIN OracleGoldenGate
+DBOPTIONS SETTAG 70
+MAP ADMIN.customers, TARGET ADMIN.customers;
+MAP ADMIN.inventory, TARGET ADMIN.inventory;
+MAP ADMIN.stores, TARGET ADMIN.stores;
+MAP ADMIN.products, TARGET ADMIN.products;
+MAP ADMIN.orders, TARGET ADMIN.orders;
+MAP ADMIN.shipments, TARGET ADMIN.shipments;
+MAP ADMIN.order_items, TARGET ADMIN.order_items;
+MAP ADMIN.customers_seq, TARGET ADMIN.customers_seq;
+
