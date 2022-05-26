@@ -1,8 +1,8 @@
-variable "tenancy_ocid" {default = "ocid1.tenancy.oc1..aaaaaaaa5nras26nkpnlcd4g3ox6gfmzjaahxwb245stlrh7krkfrpu2nu5q"}
-variable "user_ocid" {default = "ocid1.user.oc1..aaaaaaaatqiipsht6cjxhwrwydt5mewm7ps362gf4ppr6xkq5jv2vkxqassa"}
-variable "fingerprint" {default = "de:50:15:13:af:bd:76:fa:f4:77:ad:d4:af:70:a5:d6"}
-variable "private_key_path" {default = "/Users/shadab/.oci/oci_api_key.pem"}
-variable "compartment_id" {default = "ocid1.compartment.oc1..aaaaaaaaowjsfc2lnzi4solhmeetq6l4qikxfuy5tfqswexoqpc5ndqgfd5a"}
+variable "tenancy_ocid" {default = "ocid1.tenancy.oc1..aaaaaaaa2q"}
+variable "user_ocid" {default = "ocid1.user.oc1..aaaaaaaaa"}
+variable "fingerprint" {default = "de:d6"}
+variable "private_key_path" {default = "/Users/Admin/.oci/oci_api_key.pem"}
+variable "compartment_id" {default = "ocid1.compartment.oc1..aaaad5a"}
 variable "region" {default = "ap-sydney-1"}
 
 
