@@ -7,6 +7,8 @@ This repo is under active development.  Building open source software is a commu
 
 ![OCI GG ADB](https://github.com/oracle-quickstart/oci-global-multiregion-app-goldengate-autonomous/blob/0032542f901a7d901daa2de3ae875c944ac76e07/OCI%20Goldengate%20MultiRegion%20App.png)
 
+![OCI GG ADB 2](https://github.com/oracle-quickstart/oci-global-multiregion-app-goldengate-autonomous/blob/27ae243e79bb1e24e581f46cc65f1a7a7162292f/OCI_Global_App.png)
+
 ## Deployment of Stack on OCi with Terraform 
 
 Make sure your credentials are defined in $HOME/.oci/config file. As Terraform takes takes the default value from the .oci/config file
