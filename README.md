@@ -5,19 +5,8 @@ This repo is under active development.  Building open source software is a commu
 
 ![OCI Datalake Architecture](./images/127611829-6200b4ff-93a2-4481-9331-b237844018b1.png)
 
-## Resource Manager Deployment
 
-This Quick Start uses [OCI Resource Manager](https://docs.cloud.oracle.com/iaas/Content/ResourceManager/Concepts/resourcemanager.htm) to make deployment easy, sign up for an [OCI account](https://cloud.oracle.com/en_US/tryit) if you don't have one, and just click the button below:
-
-[![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/oracle-quickstart/oci-global-multiregion-app-goldengate-autonomous/releases/download/1.0/master.zip)
-
-After logging into the console you'll be taken through the same steps described
-in the [Deploy](#deploy) section below.
-
-
-Note, if you use this template to create another repo you'll need to change the link for the button to point at your repo.
-
-## Local Development
+## Local Deployment with Terraform in a Single Region
 
 Make sure your credentials are defined in $HOME/.oci/config file. As Terraform takes takes the default value from the .oci/config file
 
