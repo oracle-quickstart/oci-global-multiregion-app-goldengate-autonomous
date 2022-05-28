@@ -21,7 +21,7 @@ region=us-ashburn-1
 
 $ git clone https://github.com/oracle-quickstart/oci-global-multiregion-app-goldengate-autonomous/ 
 
-## Deployment in North America,US Ashburn
+## Deployment in North America, US - Ashburn
 $ cd NorthAmerica
 
 ### Initialize
@@ -41,7 +41,7 @@ $ terraform apply
 
 $ terraform destroy 
 
-## Deployment in Asia,Singapore
+## Deployment in Asia, Singapore
 $ cd Asia
 
 ### Initialize
@@ -61,7 +61,7 @@ $ terraform apply
 
 $ terraform destroy 
 
-## Deployment in Australia,Sydney
+## Deployment in Australia, Sydney
 $ cd Australia
 
 ### Initialize
@@ -81,7 +81,7 @@ $ terraform apply
 
 $ terraform destroy 
 
-## Deployment in Europe,Germany Frankfurt
+## Deployment in Europe, Germany - Frankfurt
 $ cd Europe
 
 ### Initialize
@@ -101,7 +101,7 @@ $ terraform apply
 
 $ terraform destroy 
 
-## Deployment in South America, Brazil SaoPaulo
+## Deployment in South America, Brazil - SaoPaulo
 $ cd SouthAmerica
 
 ### Initialize
@@ -121,7 +121,7 @@ $ terraform apply
 
 $ terraform destroy 
 
-## Deployment in Africa,South Africa Johanessburg
+## Deployment in Africa, South Africa - Johanessburg
 $ cd Africa
 
 ### Initialize
