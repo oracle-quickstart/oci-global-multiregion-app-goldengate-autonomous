@@ -3,9 +3,6 @@ Deploy a Multi-Region OCI Goldengate and Autonomous Stack to Build Distributed A
 
 This repo is under active development.  Building open source software is a community effort.  We're excited to engage with the community building this.
 
-![OCI Datalake Architecture](./images/127611829-6200b4ff-93a2-4481-9331-b237844018b1.png)
-
-
 ## Local Deployment with Terraform in a Single Region
 
 Make sure your credentials are defined in $HOME/.oci/config file. As Terraform takes takes the default value from the .oci/config file
