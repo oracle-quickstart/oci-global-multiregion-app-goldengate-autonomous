@@ -3,6 +3,8 @@ Deploy a Multi-Region OCI Goldengate and Autonomous Stack to Build Distributed A
 
 This repo is under active development.  Building open source software is a community effort.  We're excited to engage with the community building this.
 
+https://github.com/oracle-quickstart/oci-global-multiregion-app-goldengate-autonomous/blob/main/OCI%20Goldengate%20MultiRegion%20App.png
+
 ## Local Deployment with Terraform in a Single Region
 
 Make sure your credentials are defined in $HOME/.oci/config file. As Terraform takes takes the default value from the .oci/config file
