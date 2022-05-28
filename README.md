@@ -5,7 +5,7 @@ This repo is under active development.  Building open source software is a commu
 
 ![OCI GG ADB](https://github.com/oracle-quickstart/oci-global-multiregion-app-goldengate-autonomous/blob/0032542f901a7d901daa2de3ae875c944ac76e07/OCI%20Goldengate%20MultiRegion%20App.png)
 
-## Local Deployment with Terraform in a Single Region
+## Deployment of Stack on OCi with Terraform 
 
 Make sure your credentials are defined in $HOME/.oci/config file. As Terraform takes takes the default value from the .oci/config file
 
@@ -19,6 +19,7 @@ region=us-ashburn-1
 
 $ git clone https://github.com/oracle-quickstart/oci-global-multiregion-app-goldengate-autonomous/ 
 
+### Deployment in US, Ashburn
 $ cd NorthAmerica
 
 ### Initialize
@@ -37,5 +38,109 @@ $ terraform apply
 ### Destroy
 
 $ terraform destroy 
+
+### Deployment in Asia, Singapore
+$ cd Asia
+
+### Initialize
+Initialize Terraform provider for OCI and Random
+
+$ terraform init
+
+### Build Plan
+
+$ terraform plan 
+
+### Apply
+
+$ terraform apply 
+
+### Destroy
+
+$ terraform destroy 
+
+### Deployment in Australia, Sydney
+$ cd Australia
+
+### Initialize
+Initialize Terraform provider for OCI and Random
+
+$ terraform init
+
+### Build Plan
+
+$ terraform plan 
+
+### Apply
+
+$ terraform apply 
+
+### Destroy
+
+$ terraform destroy 
+
+### Deployment in Europe, Frankfurt
+$ cd Europe
+
+### Initialize
+Initialize Terraform provider for OCI and Random
+
+$ terraform init
+
+### Build Plan
+
+$ terraform plan 
+
+### Apply
+
+$ terraform apply 
+
+### Destroy
+
+$ terraform destroy 
+
+### Deployment in South America, SaoPaulo
+$ cd SouthAmerica
+
+### Initialize
+Initialize Terraform provider for OCI and Random
+
+$ terraform init
+
+### Build Plan
+
+$ terraform plan 
+
+### Apply
+
+$ terraform apply 
+
+### Destroy
+
+$ terraform destroy 
+
+### Deployment in Africa, Johanessburg
+$ cd Africa
+
+### Initialize
+Initialize Terraform provider for OCI and Random
+
+$ terraform init
+
+### Build Plan
+
+$ terraform plan 
+
+### Apply
+
+$ terraform apply 
+
+### Destroy
+
+$ terraform destroy 
+
+
+
+
 
 
