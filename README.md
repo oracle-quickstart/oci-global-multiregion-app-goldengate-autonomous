@@ -3,6 +3,8 @@ Deploy a Multi-Region OCI Goldengate and Autonomous Stack to Build Distributed A
 
 This repo is under active development.  Building open source software is a community effort.  We're excited to engage with the community building this.
 
+![OCI GG ADB Main](https://github.com/oracle-quickstart/oci-global-multiregion-app-goldengate-autonomous/blob/2309ca4d84af744330e706dbf82b8eb615e84cb7/OCI_GG_MultiRegion_Architecture.png)
+
 ![OCI GG ADB](https://github.com/oracle-quickstart/oci-global-multiregion-app-goldengate-autonomous/blob/0032542f901a7d901daa2de3ae875c944ac76e07/OCI%20Goldengate%20MultiRegion%20App.png)
 
 ## Deployment of Stack on OCi with Terraform 
