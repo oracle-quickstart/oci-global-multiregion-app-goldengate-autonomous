@@ -1,4 +1,4 @@
-# oci-global-multiregion-app-goldengate-autonomous
+# OCI Global Multiregion App Goldengate Autonomous
 Deploy a Multi-Region OCI Goldengate and Autonomous Stack to Build Distributed Apps on OCI
 
 This repo is under active development.  Building open source software is a community effort.  We're excited to engage with the community building this.
