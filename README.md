@@ -29,6 +29,7 @@ $ cd NorthAmerica
 ### Initialize
 Initialize Terraform provider for OCI and Random
 
+
 $ terraform init
 
 ### Build Plan
