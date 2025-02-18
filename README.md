@@ -144,7 +144,7 @@ $ terraform apply
 $ terraform destroy 
 
 
-
+Copyright (c) 2025 Oracle, Inc. All rights reserved. Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl. 
 
 
 
