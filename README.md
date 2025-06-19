@@ -143,8 +143,16 @@ $ terraform apply
 
 $ terraform destroy 
 
+## Contributing
 
-Copyright (c) 2025 Oracle, Inc. All rights reserved. Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl. 
+This project welcomes contributions from the community. Before submitting a pull request, please [review our contribution guide](./CONTRIBUTING.md)
 
+## Security
 
+Please consult the [security guide](./SECURITY.md) for our responsible security vulnerability disclosure process
 
+## License
+
+Copyright (c) 2025 Oracle, Inc. All rights reserved. 
+
+Licensed under the Apache License version 2.0 as shown at http://www.apache.org/licenses/
